@@ -1,0 +1,10 @@
+﻿Class:
+ A Class in C# is a fundamental building block of object-oriented programming (OOP). It serves as a blueprint for maintaining fields, properties, methods, constructors, delegates, and other members. A class organizes related data and functions together, enabling modular and reusable code.
+
+Main Points:
+
+1. Field(s) : fields are variables that belong to a class. They represent the data that an object pf the class can hold.
+2. Properties: Properties that provide controlled access to a class's fields using get and set accessors.
+3. Constructor(s): It's a special method that is used to initialize objects. It is called when an instance of the class is created.
+4. Method(s): Methods are reusable blocks of code that perform specific tasks.
+5. Delegates(s): A delegate in C# is a type-safe pointer to a method with a specific signature.
