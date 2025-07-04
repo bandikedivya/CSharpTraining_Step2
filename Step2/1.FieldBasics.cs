@@ -5,6 +5,7 @@
 
 using System;
 using System.Runtime.CompilerServices;
+using System.Security.AccessControl;
 using System.Xml.Linq;
 
 class FileDetails
@@ -22,19 +23,70 @@ class FileDetails
 
     DateTime createdDateTime = DateTime.Now;
 
+
+    void showMessage(string filename, string location)
+    {
+        Console.WriteLine($"Hello, File Name is: {this.fileName} and Location is: {fileLocation}");   //this. - refer to the current class which is "FileDetails"
+    }
+
+
+    static void showDocFileHistory(string name, string createddate)
+    {
+        Console.WriteLine($"Hello, File name is: {name} and Created Date is: {createddate}");
+    }
+
+    static void ShowWordFileSize(string name, string filesize)
+    {
+        Console.WriteLine($"Hello, File name is {name} and file size is {filesize}");
+    }
+
+
+    static void ShowDetailsMessage(FileDetails file)
+    {
+        Console.WriteLine($"Hello,  name is {file.fileName} , size is {file.fileSize}  , location {file.fileLocation} and created DAte {file.createdDate}");
+    }
+
     static void Main()
     {
-        FileDetails fileDetails = new FileDetails();
 
+        FileDetails fileDetails1 = new FileDetails();
+        fileDetails1.fileName = "visualstudio.docs";
+        fileDetails1.fileSize = "10kb";
+        ShowWordFileSize(fileDetails1.fileName, fileDetails1.fileSize); 
+
+        FileDetails fileDetails = new FileDetails();
         fileDetails.fileName = "Marcus_Resume.docx";
         fileDetails.fileLocation = @"D:\Student1\Resume";
         fileDetails.fileSize = "5kb";
         fileDetails.createdDate = "July-04-25";
 
 
+        //single statement;
+
+        FileDetails file4 = new FileDetails()
+        {
+            fileName = "CreditCardStatemtn.pdf",
+            fileLocation = @"c:/Downloads",
+            fileSize = "5Kb",
+            createdDate = "April-01-2025"
+        };
+        ShowDetailsMessage(file4);
+
         string fileCreatedDate = fileDetails.createdDate;
         
         Console.WriteLine(fileCreatedDate);
+
+
+        Console.WriteLine($"Print the Instance of class: {fileDetails}");
+        Console.WriteLine($"FileName is: {fileDetails.fileName}");
+        Console.WriteLine($"fileLocation is: {fileDetails.fileLocation}");
+        Console.WriteLine($"fileSize is: {fileDetails.fileSize}");
+        Console.WriteLine($"createdDate is: {fileDetails.createdDate}");
+
+        fileDetails.showMessage(fileDetails.fileName, fileDetails.fileLocation);
+        
+        showDocFileHistory("ConsoleApp.doc","July-04-25");
+
     }
 }
 
@@ -50,26 +102,19 @@ class FileDetails
 //        Console.WriteLine($"Hello, File name is {name} and created date is {createddate}");
 //    }
 
-//    static void ShowWordFileSize(string name, string filesize)
-//    {
-//        Console.WriteLine($"Hello, File name is {name} and file size is {filesize}");
-//    }
 
 
-//    static void ShowDetailsMessage(FileDetails file)
-//    {
-//        Console.WriteLine($"Hello,  name is {file.fileName} , size is {file.fileSize}  , location {file.fileLocation} and created DAte {file.createdDate}");
-//    }
+
 
 
 //    static void Main()
 //    {
 
 
-//        FileDetails file2 = new FileDetails();
-//        file2.fileName = "VisualStudioCodeInstallationDocument.docx";
-//        file2.fileSize = "10kb";
-//        ShowWordFileSize(file2.fileName, file2.fileSize);
+//FileDetails file2 = new FileDetails();
+//file2.fileName = "VisualStudioCodeInstallationDocument.docx";
+//file2.fileSize = "10kb";
+//ShowWordFileSize(file2.fileName, file2.fileSize);
 
 
 //        FileDetails fileInstance = new FileDetails();
@@ -80,16 +125,7 @@ class FileDetails
 //        ShowDetailsMessage(fileInstance);
 
 
-//        //single statement;
 
-//        FileDetails file4 = new FileDetails()
-//        {
-//            fileName = "CreditCardStatemtn.pdf",
-//            fileLocation = @"c:/Downloads",
-//            fileSize = "5Kb",
-//            createdDate = "April-01-2025"
-//        };
-//        ShowDetailsMessage(file4);
 
 
 
