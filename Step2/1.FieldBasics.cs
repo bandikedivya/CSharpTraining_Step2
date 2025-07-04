@@ -25,8 +25,15 @@ class FileDetails
     static void Main()
     {
         FileDetails fileDetails = new FileDetails();
+
+        fileDetails.fileName = "Marcus_Resume.docx";
+        fileDetails.fileLocation = @"D:\Student1\Resume";
+        fileDetails.fileSize = "5kb";
+        fileDetails.createdDate = "July-04-25";
+
+
         string fileCreatedDate = fileDetails.createdDate;
-        fileDetails.fileName = fileCreatedDate; 
+        
         Console.WriteLine(fileCreatedDate);
     }
 }
