@@ -33,7 +33,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>StudentResume</StartupObject>
+    <StartupObject>MainProgramSystem.MainProgram</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -48,6 +48,14 @@
   <ItemGroup>
     <Compile Include="1.FieldBasics.cs" />
     <Compile Include="2.Properties.cs" />
+    <Compile Include="3.Constructor.cs" />
+    <Compile Include="4.ConstReadOnly.cs" />
+    <Compile Include="5.Namespace\1.AllDeptartments.cs" />
+    <Compile Include="5.Namespace\2.CseDept.cs" />
+    <Compile Include="5.Namespace\3.EceDept.cs" />
+    <Compile Include="5.Namespace\4.EeeDept.cs" />
+    <Compile Include="5.Namespace\4.MechDept.cs" />
+    <Compile Include="5.Namespace\MainProgram.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
