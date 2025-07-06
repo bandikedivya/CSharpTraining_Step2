@@ -33,7 +33,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>Logger</StartupObject>
+    <StartupObject>StaticAndNonStaticInstatiate.Program</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -57,6 +57,8 @@
     <Compile Include="5.Namespace\4.MechDept.cs" />
     <Compile Include="5.Namespace\MainProgram.cs" />
     <Compile Include="6.Static_Classes.cs" />
+    <Compile Include="7.StaticVsNonStatic\1.Instantiate.cs" />
+    <Compile Include="7.StaticVsNonStatic\2.Member.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
