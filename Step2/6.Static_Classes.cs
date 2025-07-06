@@ -17,7 +17,7 @@ static class Logger
 
      static void Actor(string housename, string actorname)
     {
-        Console.WriteLine($"{actorname} Visits {housename} during summer");
+        Console.WriteLine($"[{actorname} Visits {housename}] during summer");
     }
 
     static void Actor1(string actorname)
