@@ -58,9 +58,17 @@ namespace StaticAndNonStaticInstatiate
 
             NonStaticRestaurantLogger nonStaticRestaurantLogger = new NonStaticRestaurantLogger();
             nonStaticRestaurantLogger.Joinedrestaurant("Master1 ");
-            nonStaticRestaurantLogger.Joinedrestaurant("Master2 ");
-            nonStaticRestaurantLogger.Joinedrestaurant("Master3 ");
             Console.WriteLine($"Total number of Chefs joined in my restaurant:{nonStaticRestaurantLogger.GetChefListCount()}");
+
+
+            NonStaticRestaurantLogger nonStaticRestaurantLogger1 = new NonStaticRestaurantLogger();
+            nonStaticRestaurantLogger1.Joinedrestaurant("Master2 ");
+            Console.WriteLine($"Total number of Chefs joined in my restaurant:{nonStaticRestaurantLogger1.GetChefListCount()}");
+
+
+            NonStaticRestaurantLogger nonStaticRestaurantLogger2 = new NonStaticRestaurantLogger();
+            nonStaticRestaurantLogger2.Joinedrestaurant("Master3 ");
+            Console.WriteLine($"Total number of Chefs joined in my restaurant:{nonStaticRestaurantLogger2.GetChefListCount()}");
 
 
 
