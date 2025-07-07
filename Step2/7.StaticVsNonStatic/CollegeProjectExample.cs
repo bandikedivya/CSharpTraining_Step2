@@ -29,7 +29,7 @@ namespace CollegeProject
 
         public void CallTeamMember1()
         {
-            Console.WriteLine($"Calling Teammember1: {this.TeamMember1}");
+            Console.WriteLine($"Calling Teammember1: {TeamMember1}");
         }
 
         public void CallTeamMember2()

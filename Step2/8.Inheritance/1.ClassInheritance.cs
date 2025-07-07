@@ -1,141 +1,153 @@
 ﻿
 using System;
-
-namespace Family
+namespace OnlineShopping
 {
-    class Father
+    class Ajio
     {
         public string Name { get; set; }
 
-        //public Father(string name)
-        //{
-        //    Name = name;
-        //    Console.WriteLine($"name paramter is is {name}");
-        //}
-        public Father()
+        public Ajio()
         {
-            Name = "Alice";
-            Console.WriteLine($"name paramter is is {Name}");
+            Name = "Jack";
+            Console.WriteLine($"{Name} purchased from Ajio");
         }
-
-        public Father(string name)
+        public Ajio(string name)
         {
-            Console.WriteLine($"Hello my kid name is {name}");
+            Console.WriteLine($"{name} purchased from BBSale in Ajio");
         }
-
-
 
         public void ShowMessage()
         {
-            Console.WriteLine($"Hello, I am {Name}, the Father.");
+            Console.WriteLine($"BBSALE is Live, {Name} ordered product in BBSALE in Ajio");
         }
     }
-
-    class Mother
+    class Myntra : Ajio
     {
-        ///
-    }
-
-    class Child : Father
-    {
-        public Child()
+        
+        public Myntra()
         {
-            Console.WriteLine($"From Child Class and myfather name is {Name}");
+           
+            Console.WriteLine($"{Name} purchased from Myntra");
+        }
+        public Myntra(string myname) : base(myname)
+        {
+
+
+            Console.WriteLine($"{myname} purchased from Flat80% SALE in Myntra");
+        }
+        public void ShowSaleMessage()
+        {
+            Console.WriteLine($"BBSALE is Live, {Name} ordered product in BBSALE in Ajio");
         }
 
-        public Child(string kidName) : base(kidName)
-        {
-            {
-                Console.WriteLine($"After my father decided now my name is {kidName}");
-            }
-        }
-
-        public string[] myClassFreinds()
-        {
-            return new string[] { "Ram", "Raki" };
-        }
     }
 
     class Program
     {
-        static void Main()
+        static void Main(string[] args)
         {
-            //Child child = new Child();
-            Child child = new Child("Jurnior Alice");
-            child.myClassFreinds(); //ownmembers
-            child.ShowMessage();   //parent
+
+            Myntra myntra = new Myntra("Sky");
+            myntra.ShowSaleMessage();
+            myntra.ShowMessage();
 
 
-            Father father = new Father();
-            //father.myclass
+
+
+
+
+            Ajio ajio = new Ajio();
+
 
         }
     }
 
-
 }
+
+
+
+
+
+
+
 //using System;
-//namespace OnlineShopping
+//using System.Collections.Generic;
+
+//namespace Family
 //{
-//    class Ajio
+//    class Father
 //    {
 //        public string Name { get; set; }
 
-//        public Ajio()
+//        //public Father(string name)
+//        //{
+//        //    Name = name;
+//        //    Console.WriteLine($"name paramter is is {name}");
+//        //}
+//        public Father()
 //        {
-//            Name = "Jack";
-//            Console.WriteLine($"{Name} purchased from Ajio");
-//        }
-//        public Ajio( string name )
-//        {
-//            Console.WriteLine($"{name} purchased from BBSale in Ajio");
+//            Name = "Alice";
+//            Console.WriteLine($"name paramter is is {Name}");
 //        }
 
-//        public void ShowMessage()
+//        public Father(string name)
 //        {
-//            Console.WriteLine($"BBSALE is Live, {Name} ordered product in BBSALE in Ajio");
+//            Console.WriteLine($"Hello my kid name is {name}");
+//        }
+
+
+
+//        public void ShowMessage(string Name)
+//        {
+//            Console.WriteLine($"Hello, I am {Name}, the Father.");
 //        }
 //    }
-//    class Myntra : Ajio
+
+//    class Mother
 //    {
-//        public string Name { get; set; }
+//        ///
+//    }
 
-//        public Myntra()
+//    class Child : Father
+//    {
+//        public Child()
 //        {
-//            Name = "Jack";
-//            Console.WriteLine($"{Name} purchased from Myntra");
-//        }
-//        public Myntra(string myname) : base(myname) 
-//        {
-
-
-//            Console.WriteLine($"{myname} purchased from Flat80% SALE in Myntra");
-//        }
-//        public void ShowSaleMessage()
-//        {
-//            Console.WriteLine($"BBSALE is Live, {Name} ordered product in BBSALE in Ajio");
+//            Console.WriteLine($"From Child Class and myfather name is {Name}");
 //        }
 
+//        public Child(string kidName) : base(kidName)
+//        {
+//            {
+//                Console.WriteLine($"After my father decided now my name is {kidName}");
+//            }
+//        }
+
+//        public string[] myClassFreinds()
+//        {
+
+//            return new string[] { "Ram", "Raki" };
+
+//        }
 //    }
 
 //    class Program
 //    {
-//        static void Main(string[] args)
+//        static void Main()
 //        {
+//            //Child child = new Child();
+//            Child child = new Child("Jurnior Alice");
+//            Console.WriteLine($"My friend are {new string[2]}");
 
-//            Myntra myntra = new Myntra("Sky");
-//            myntra.ShowSaleMessage();
-//            myntra.ShowMessage();
+//            child.myClassFreinds(); //ownmembers
+
+//            child.ShowMessage("Alice");   //parent
 
 
-
-
-
-
-//            Ajio ajio = new Ajio();
-
+//            Father father = new Father();
+//            //father.myclass
 
 //        }
 //    }
+
 
 //}
