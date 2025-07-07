@@ -1,0 +1,28 @@
+﻿
+Interface (Contract on rules):
+
+
+An interface is like a contract in programming. It defines a set of rules (methods, properties, or events) 
+that a class must follow but does not provide the implementation for those rules.
+Key Points:
+• Interfaces only declare the what (method signatures, properties) and not the how (no method bodies or logic).
+  Any class has to agrees to that interface and must provide its own version of the implementation.
+■ A class can implement multiple interfaces, enabling it to adhere to multiple contracts, unlike class inheritance which allows only one base class.
+
+
+
+
+Implementation:
+
+
+Implementation means a class provides the actual code for the methods defined in an interface. 
+The interface only describes what should be done, while the class explains how it is done. 
+This helps us follow a contract and write our own custom logic based on it.
+Key Points:
+
+ 1. A class implements an interface using the : symbol.
+ 2. Interfaces only declare method names, not the logic.
+
+ 3. The class must provide code for all methods in the interface.
+ 4. Implementation allows different classes to follow the same structure.
+ 5. It supports flexibility and consistency across multiple classes.
