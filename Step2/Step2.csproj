@@ -33,7 +33,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>EmployeeSystem.Program</StartupObject>
+    <StartupObject>SampleApplication.Program</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -47,6 +47,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="1.FieldBasics.cs" />
+    <Compile Include="1.SampleApplication.cs" />
     <Compile Include="2.Properties.cs" />
     <Compile Include="3.Constructor.cs" />
     <Compile Include="4.ConstReadOnly.cs" />
@@ -73,6 +74,9 @@
     <Content Include="8.Inheritance\Inhertance Notes.txt" />
     <Content Include="9.Implementation\InterfaceAndImplementationNotes.txt" />
     <Content Include="Notes.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="10.Abstarction\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
