@@ -14,78 +14,89 @@ namespace SampleApplication
 
 
 
-       public void CustomerDetails(string name, string email)
+        public void CustomerDetails(string name, string email)
         {
             this.CustomerName = name;
             this.CustomerEmailID = email;
+            Console.WriteLine($"Customer Name is: {name} and Customer Email ID is: {email}");
         }
 
 
-        public void ShowCustomerDetails()
-        {
-            Console.WriteLine($"Customer Name is: {CustomerName} and Customer Email ID is: {CustomerEmailID}");
-        }
+        //public void ShowCustomerDetails()
+        //{
+        //    Console.WriteLine($"Customer Name is: {CustomerName} and Customer Email ID is: {CustomerEmailID}");
+        //}
 
         //public void ShowEmail()
         //{
         //    Console.WriteLine($"Customer Email ID is: {CustomerEmailID}");
         //}
-       
+
 
         //Concrete Method(Normal Method)
         //Derived Class (Child Class) - Both are same
         // Should use "override" keyword when we want to abstract the dervied class from abstract class
         class CreditCard : BankApp
-    {
-        public override void Login()
         {
-            Console.WriteLine("Customer has logged in to the Bank App and Viewed Credit Card Option");
+            public override void Login()
+            {
+                Console.WriteLine("Customer has logged in to the Bank App and Viewed Credit Card Option");
+            }
+
+            public override void Logout()
+            {
+                Console.WriteLine("Customer has logged out from the Bank App");
+            }
+
+            //Direct Methods
+
+            public void ShowCreditCardOptions()
+            {
+                Console.WriteLine("Welcome to Credit Card Options, Check the Credit Score and Apply");
+            }
         }
 
-        public override void Logout()
+
+
+        class DebitCard : BankApp
         {
-            Console.WriteLine("Customer has logged out from the Bank App");
+            public override void Login()
+            {
+                Console.WriteLine("Customer has logged in to the Bank App and Viewd Debit Card Option");
+            }
+
+            public override void Logout()
+            {
+                Console.WriteLine("Customer has logged out from the Bank App");
+            }
+
+            public void ApplyDebitCard()
+            {
+                Console.WriteLine("Complete KYC to Apply for Debit Card");
+            }
         }
 
-        //Direct Methods
-
-        public void ShowCreditCardOptions()
+        class Program
         {
-            Console.WriteLine("Welcome to Credit Card Options, Check the Credit Score and Apply");
-        }
-    }
+            static void Main()
+            {
+                BankApp app = new CreditCard();
+                app.Login();
+                app.Logout();
+                //app.CustomerName = "Divya";
+                //app.CustomerEmailID = "12345";
+                 app.CustomerDetails("abc", "1234");
 
+                //app.ShowCustomerDetails();
 
+                BankApp debitcard = new DebitCard();
+                debitcard.Login();
+                debitcard.Logout();
 
-    class DebitCard : BankApp
-    {
-        public override void Login()
-        {
-            Console.WriteLine("Customer has logged in to the Bank App and Viewd Debit Card Option");
-        }
+                DebitCard debit = new DebitCard();
+                debit.ApplyDebitCard();
 
-        public override void Logout()
-        {
-            Console.WriteLine("Customer has logged out from the Bank App");
-        }
-
-        public void ApplyDebitCard()
-        {
-            Console.WriteLine("Complete KYC to Apply for Debit Card");
-        }
-    }
-
-    class Program
-    {
-        static void Main()
-        {
-            BankApp app = new CreditCard();
-            app.Login();
-            app.Logout();
-
-            BankApp debitcard = new DebitCard();
-            debitcard.Login();
-            debitcard.Logout();
+            }
         }
     }
 }
