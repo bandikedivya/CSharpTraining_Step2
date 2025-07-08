@@ -14,7 +14,12 @@ namespace SampleApplication
 
 
 
-        //Concrete Method(Normal Method)
+       public void CustomerDetails(string name, string email)
+        {
+            this.CustomerName = name;
+            this.CustomerEmailID = email;
+        }
+
 
         public void ShowCustomerDetails()
         {
@@ -25,12 +30,12 @@ namespace SampleApplication
         //{
         //    Console.WriteLine($"Customer Email ID is: {CustomerEmailID}");
         //}
+       
 
-    }
-
-    //Derived Class (Child Class) - Both are same
-    // Should use "override" keyword when we want to abstract the dervied class from abstract class
-    class CreditCard : BankApp
+        //Concrete Method(Normal Method)
+        //Derived Class (Child Class) - Both are same
+        // Should use "override" keyword when we want to abstract the dervied class from abstract class
+        class CreditCard : BankApp
     {
         public override void Login()
         {
