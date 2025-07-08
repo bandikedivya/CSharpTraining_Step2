@@ -7,8 +7,8 @@ namespace SampleApplication
     // Rule + method Implementation
     abstract class BankApp
     {
-        public string CustomerName {  get; set; }
-        public string CustomerEmailID {  get; set; }
+        public string CustomerName { get; set; }
+        public string CustomerEmailID { get; set; }
         public abstract void Login();
         public abstract void Logout();
 
@@ -25,7 +25,7 @@ namespace SampleApplication
         //{
         //    Console.WriteLine($"Customer Email ID is: {CustomerEmailID}");
         //}
-       
+
     }
 
     //Derived Class (Child Class) - Both are same
@@ -77,7 +77,7 @@ namespace SampleApplication
             BankApp app = new CreditCard();
             app.Login();
             app.Logout();
-            
+
             BankApp debitcard = new DebitCard();
             debitcard.Login();
             debitcard.Logout();

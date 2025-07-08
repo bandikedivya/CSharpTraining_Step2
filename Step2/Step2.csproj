@@ -47,7 +47,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="1.FieldBasics.cs" />
-    <Compile Include="1.SampleApplication.cs" />
+    <Compile Include="10.Abstarction\SampleApplication.cs" />
     <Compile Include="2.Properties.cs" />
     <Compile Include="3.Constructor.cs" />
     <Compile Include="4.ConstReadOnly.cs" />
@@ -75,8 +75,6 @@
     <Content Include="9.Implementation\InterfaceAndImplementationNotes.txt" />
     <Content Include="Notes.txt" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="10.Abstarction\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
