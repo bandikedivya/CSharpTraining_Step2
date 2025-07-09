@@ -14,23 +14,26 @@ namespace SampleApplication
 
 
 
-        public void CustomerDetails(string name, string email)
-        {
-            this.CustomerName = name;
-            this.CustomerEmailID = email;
-            Console.WriteLine($"Customer Name is: {name} and Customer Email ID is: {email}");
-        }
-
-
-        //public void ShowCustomerDetails()
+        //public void CustomerDetails(string name, string email)
         //{
-        //    Console.WriteLine($"Customer Name is: {CustomerName} and Customer Email ID is: {CustomerEmailID}");
+        //    //this.CustomerName = name;
+        //    //this.CustomerEmailID = email;
+        //    Console.WriteLine($"Customer Name is: {name} and Customer Email ID is: {email}");
         //}
+
+
+        public void ShowCustomerDetails()
+        {
+            Console.WriteLine($"[Customer Name]: {CustomerName} , [Customer Email ID] : {CustomerEmailID}");
+        }
 
         //public void ShowEmail()
         //{
         //    Console.WriteLine($"Customer Email ID is: {CustomerEmailID}");
         //}
+
+
+
 
 
         //Concrete Method(Normal Method)
@@ -48,11 +51,16 @@ namespace SampleApplication
                 Console.WriteLine("Customer has logged out from the Bank App");
             }
 
-            //Direct Methods
 
+            //Direct Methods
             public void ShowCreditCardOptions()
             {
-                Console.WriteLine("Welcome to Credit Card Options, Check the Credit Score and Apply");
+                Console.WriteLine("Welcome to Credit Card Options, Check your Credit Score and Apply");
+            }
+
+            public void AppliedCreditCard()
+            {
+                Console.WriteLine("You have applied for Credit Card, Your application is being processed. Thank you for applying Credit Card..");
             }
         }
 
@@ -70,31 +78,62 @@ namespace SampleApplication
                 Console.WriteLine("Customer has logged out from the Bank App");
             }
 
+            public void ShowDebitCardOptions()
+            {
+                Console.WriteLine("Welcome to Debit Card Options, Apply and Complete KYC Online to get Debit Card..");
+            } 
             public void ApplyDebitCard()
             {
-                Console.WriteLine("Complete KYC to Apply for Debit Card");
+                Console.WriteLine("You have applied for Debit Card, Your application is being processed. Thank you for applying Debit Card..");
             }
         }
-
+        //1. For Abstract class, we cannot create instance,
+        //2. But Abstarct class , we can refer to the child or derived class
         class Program
         {
             static void Main()
             {
-                BankApp app = new CreditCard();
+                BankApp app = new CreditCard()
+                {
+                    CustomerName = "Justin",
+                    CustomerEmailID = "justin1234@gmail.com"
+                };
+                
                 app.Login();
+                app.ShowCustomerDetails();
+                CreditCard appCreditCard = new CreditCard();
+                appCreditCard.ShowCreditCardOptions();
+                appCreditCard.AppliedCreditCard();
                 app.Logout();
+
+
                 //app.CustomerName = "Divya";
                 //app.CustomerEmailID = "12345";
-                 app.CustomerDetails("abc", "1234");
+                //app.CustomerDetails("abc", "1234");
+
+
 
                 //app.ShowCustomerDetails();
 
-                BankApp debitcard = new DebitCard();
-                debitcard.Login();
-                debitcard.Logout();
+                BankApp debitcard = new DebitCard()
 
+                {
+                    CustomerName = "Jermaiah",
+                    CustomerEmailID = "jermaiah@gmail.com"
+
+                };
+                
+                debitcard.Login();
+
+                debitcard.ShowCustomerDetails();
                 DebitCard debit = new DebitCard();
+                debit.ShowDebitCardOptions();
                 debit.ApplyDebitCard();
+
+                debitcard.Logout();
+                
+
+               
 
             }
         }
