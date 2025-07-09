@@ -1,26 +1,59 @@
 ﻿using InterfaceInheticanceBasics;
+using System;
 
 namespace InterfaceInheticanceBasics
 {
-    interface Interface1
+
+    interface IGmail
     {
-        int property1 { get; set; }
-        int Method1();
+        string EmailId { get; set; }
+        string MobileNumber { get; set; }
+        string Password { get; set; }
 
-        string Method2();
-        string Method3(int a, int b);
+        void ShowDetails();
 
+        string EmailNumber(string EmailId, string MobileNumber);
     }
-
-    interface Interface3
-    {
-        string Method4();
-
-    }
-
-    //one interface can inherite from multiple class
-    interface Interface2 : Interface1, Interface3
-    {
-        string Method5();
+     interface IChrome
+    { 
+    
+        void EmailPassword(string EmailId, string Password);
     }
 }
+
+    interface IFacebook
+    {
+        void Facebook(string EmailId, string Password);
+    }
+
+    
+    //class Bgmi: IGmail, IChrome,IFacebook
+    //{
+    //    //string LoginCredentials(string EmailId, string Password);
+    //}
+
+    
+
+
+
+//interface Interface1
+//{
+//    int property1 { get; set; }
+//    int Method1();
+
+//    string Method2();
+//    string Method3(int a, int b);
+
+//}
+
+//interface Interface3
+//{
+//    string Method4();
+
+//}
+
+////one interface can inherite from multiple class
+//interface Interface2 : Interface1, Interface3
+//{
+//    string Method5();
+//}

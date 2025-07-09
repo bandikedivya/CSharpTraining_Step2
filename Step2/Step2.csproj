@@ -33,7 +33,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>Manufacturer.Program</StartupObject>
+    <StartupObject>OnlineShopping.Program</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -50,6 +50,7 @@
     <Compile Include="10.Abstarction\SampleApplication.cs" />
     <Compile Include="11.Polymorphism\1.CompileTime.cs" />
     <Compile Include="11.Polymorphism\2.RunTime.cs" />
+    <Compile Include="11.Polymorphism\CompileExample.cs" />
     <Compile Include="2.Properties.cs" />
     <Compile Include="3.Constructor.cs" />
     <Compile Include="4.ConstReadOnly.cs" />

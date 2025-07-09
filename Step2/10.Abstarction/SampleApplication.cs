@@ -14,27 +14,14 @@ namespace SampleApplication
 
 
 
-        //public void CustomerDetails(string name, string email)
-        //{
-        //    //this.CustomerName = name;
-        //    //this.CustomerEmailID = email;
-        //    Console.WriteLine($"Customer Name is: {name} and Customer Email ID is: {email}");
-        //}
-
-
         public void ShowCustomerDetails()
         {
             Console.WriteLine($"[Customer Name]: {CustomerName} , [Customer Email ID] : {CustomerEmailID}");
         }
 
-        //public void ShowEmail()
-        //{
-        //    Console.WriteLine($"Customer Email ID is: {CustomerEmailID}");
-        //}
 
 
-
-
+        
 
         //Concrete Method(Normal Method)
         //Derived Class (Child Class) - Both are same
@@ -101,9 +88,10 @@ namespace SampleApplication
                 
                 app.Login();
                 app.ShowCustomerDetails();
-                CreditCard appCreditCard = new CreditCard();
-                appCreditCard.ShowCreditCardOptions();
-                appCreditCard.AppliedCreditCard();
+                
+                //CreditCard appCreditCard = new CreditCard();
+                //appCreditCard.ShowCreditCardOptions();
+                //appCreditCard.AppliedCreditCard();
                 app.Logout();
 
 

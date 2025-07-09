@@ -11,11 +11,11 @@ namespace OnlineShopping
             Name = "Jack";
             Console.WriteLine($"{Name} purchased from Ajio");
         }
-        public Ajio(string name)
+        public Ajio(string name) 
         {
             Console.WriteLine($"{name} purchased from BBSale in Ajio");
         }
-
+        
         public void ShowMessage()
         {
             Console.WriteLine($"BBSALE is Live, {Name} ordered product in BBSALE in Ajio");
@@ -37,7 +37,7 @@ namespace OnlineShopping
         }
         public void ShowSaleMessage()
         {
-            Console.WriteLine($"BBSALE is Live, {Name} ordered product in BBSALE in Ajio");
+            Console.WriteLine($"Flat80% is Live, {Name} ordered product in BBSALE in Ajio");
         }
 
     }
@@ -50,14 +50,16 @@ namespace OnlineShopping
             Myntra myntra = new Myntra("Sky");
             myntra.ShowSaleMessage();
             myntra.ShowMessage();
+            
 
 
 
 
-
-
-            Ajio ajio = new Ajio();
-
+            //Ajio ajio = new Ajio();
+            //Ajio ajio1 = new Ajio("Divya");
+            //ajio.ShowMessage();
+            
+            
 
         }
     }
