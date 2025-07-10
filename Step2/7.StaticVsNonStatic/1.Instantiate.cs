@@ -37,7 +37,7 @@ namespace StaticAndNonStaticInstatiate
             NonStaticClass nonStaticClass = new NonStaticClass();
             nonStaticClass.NonStaticClassWithNonStaticMethod();
 
-            NonStaticClass.NonStaticClassWithStaticMethod();
+            NonStaticClass.NonStaticClassWithStaticMethod(); //Nonstatic is the class. To call static method in non static class, We use Class name to call the method
 
 
 
