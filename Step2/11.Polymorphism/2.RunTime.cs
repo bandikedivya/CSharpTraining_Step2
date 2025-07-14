@@ -11,6 +11,7 @@ abstract class Manufacturer
 
     public abstract void GetSalary();
 
+   
     public void EmpDetails()
     {
         Console.WriteLine($"Employee Name: {EmpName}");

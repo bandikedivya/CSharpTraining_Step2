@@ -21,7 +21,7 @@ class ConstReadOnly
         // a = 14; //throws error, as it is assigned to a value by using const keyword
         //name = "marcus";  // throws error, as it is assigned to a value by using const keyword
 
-       // releasedate = "16-July-2025 ";
+       releasedate = "16-July-2025 ";
     }
     static void Main()
     {
