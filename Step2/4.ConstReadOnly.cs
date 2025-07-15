@@ -26,8 +26,8 @@ class ConstReadOnly
     static void Main()
     {
        ConstReadOnly constReadOnly = new ConstReadOnly();
-        Console.WriteLine(a); //10
-        Console.WriteLine(name); //Jermaiah
+        Console.WriteLine(a); //10                     //called directly as instance is not required
+        Console.WriteLine(name); //Jermaiah               //called directly as instance is not required
         Console.WriteLine(constReadOnly.releasedate); // 16-June-2025
         Console.WriteLine(constReadOnly.b); //0, as it not assigned to a value.
 

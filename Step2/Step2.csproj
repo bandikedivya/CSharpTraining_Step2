@@ -33,7 +33,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>Inheritance.Program</StartupObject>
+    <StartupObject>SampleApplication.BankApp.Program</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -68,9 +68,9 @@
     <Compile Include="8.Inheritance\2.InterfaceInheritance.cs" />
     <Compile Include="9.Implementation\1.InterfaceBasics.cs" />
     <Compile Include="9.Implementation\2.EmployeeSystem.cs" />
-    <Compile Include="Demo\Constant.cs" />
+    <Compile Include="Constant.cs" />
     <Compile Include="Demo\Inheritance.cs" />
-    <Compile Include="Demo\Readonly.cs" />
+    <Compile Include="Demo\ConstAndReadonly.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
