@@ -10,7 +10,8 @@ namespace ConstAndReadOnly
 
         // readonly fields
         public readonly string StudentName = "Sebastian";
-        public readonly int Age;
+        //readonly fields with declared without assigning value
+        public readonly int Age;                
         public readonly string FatherName;
         public readonly string Department;
 
@@ -30,14 +31,14 @@ namespace ConstAndReadOnly
         {
            
 
-            Console.WriteLine($"Calling constant value: {StudentRollNo}");
-            Console.WriteLine($"Calling constant value: {DOB}");
+            Console.WriteLine($"Calling constant value and The Student Roll No: {StudentRollNo}");
+            Console.WriteLine($"Calling constant value and The Student DOB: {DOB}");
 
             CollegeRegistration student1 = new CollegeRegistration();
-            Console.WriteLine($"Calling readonly value: {student1.StudentName}");
-            Console.WriteLine($"Calling readonly value: {student1.Age}");
-            Console.WriteLine($"Calling readonly value: {student1.FatherName}");
-            Console.WriteLine($"Calling readonly value: {student1.Department}");
+            Console.WriteLine($"Calling readonly value and The Student's Updated Name: {student1.StudentName}");
+            Console.WriteLine($"Calling readonly value and The Age of the Student: {student1.Age}");
+            Console.WriteLine($"Calling readonly value and The Father Name: {student1.FatherName}");
+            Console.WriteLine($"Calling readonly value and The Student's Department: {student1.Department}");
 
 
 

@@ -34,7 +34,7 @@ namespace UserCompanyRegistartion
     public class TCSRegistration : User
     {
 
-        //A constructor for TCSRegistration that calls the base class constructor (: base(...)) to set inherited properties.
+        //A constructor for TCSRegistration which calls the base class constructor (: base(...)) to set inherited properties.
         public TCSRegistration(string name, string email, string mobilenum) : base(name, email,  mobilenum)
         {
         }
@@ -74,14 +74,12 @@ namespace UserCompanyRegistartion
             tcs.TCSRegistrationProcess();   //own method
 
 
-            //AccentureRegistration accenture = new AccentureRegistration("Sophia", "sophia@gmail.com", "+919876543210");
-            //accenture.Login();
-            //accenture.AccentureRegistrationProcesss();
+            AccentureRegistration accenture = new AccentureRegistration("Sophia", "sophia@gmail.com", "+919876543210");
+            accenture.Login();    //inherited method
+            accenture.AccentureRegistrationProcesss();       //own method
 
 
-            AccentureRegistration accenture = new AccentureRegistration("Rahul", "rahul@gmail.com","+919123567489");
-            accenture.Login(); //inherited method
-            accenture.AccentureRegistrationProcesss();   //own method
+
         }
     }
 }
